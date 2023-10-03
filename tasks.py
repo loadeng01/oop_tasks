@@ -43,23 +43,50 @@
 # TASK 3
 
 
-
-class StringUtils:
-    @staticmethod
-    def is_palindrome(word: str):
-        word = word.lower()
-        if word == word[::-1]:
-            return True
-        return False
-
-print(StringUtils.is_palindrome('Nolon'))
-
-
+# class StringUtils:
+#     @staticmethod
+#     def is_palindrome(word: str):
+#         word = word.lower()
+#         if word == word[::-1]:
+#             return True
+#         return False
+#
+# print(StringUtils.is_palindrome('Nolon'))
 
 
 #
 # 4)Создайте класс Shape с staticmethod под названием get_circle_area, который принимает радиус и возвращает площадь круга.
 # Площадь круга вычисляется по формуле πr^2, где π примерно равно 3.14159.
+
+# TASK 4
+class Shape:
+    @staticmethod
+    def get_circle_area(radius):
+        from math import pi
+        return (radius**2) * pi
+
+print(Shape.get_circle_area(4))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 # 5)Создайте класс FileUtils с classmethod под названием get_file_extension,
 # который принимает имя файла в виде строки и возвращает его расширение.
