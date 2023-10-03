@@ -17,20 +17,20 @@
 # (например, "2023-07-18") и проверяет, является ли эта дата действительной. Метод должен возвращать True,
 # если дата действительна, и False в противном случае.
 
-class DateUtils:
-    @classmethod
-    def is_valid_date(cls, date: str):
-        from datetime import datetime
-        current = datetime.now().strftime(f'%Y-%m-%d')
+# TASK 2
 
-        if current == date:
-            return True
-        return False
-
-date = DateUtils.is_valid_date("2023-07-18")
-print(date)
-
-
+# class DateUtils:
+#     @classmethod
+#     def is_valid_date(cls, date: str):
+#         from datetime import datetime
+#         current = datetime.now().strftime(f'%Y-%m-%d')
+#
+#         if current == date:
+#             return True
+#         return False
+#
+# date = DateUtils.is_valid_date("2023-07-18")
+# print(date)
 
 
 
@@ -40,7 +40,19 @@ print(date)
 # является ли она палиндромом (читается одинаково слева направо и справа налево). Метод должен возвращать True,
 # если строка является палиндромом, и False в противном случае.
 
+# TASK 3
 
+
+
+class StringUtils:
+    @staticmethod
+    def is_palindrome(word: str):
+        word = word.lower()
+        if word == word[::-1]:
+            return True
+        return False
+
+print(StringUtils.is_palindrome('Nolon'))
 
 
 
