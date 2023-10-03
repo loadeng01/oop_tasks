@@ -59,31 +59,13 @@
 # Площадь круга вычисляется по формуле πr^2, где π примерно равно 3.14159.
 
 # TASK 4
-class Shape:
-    @staticmethod
-    def get_circle_area(radius):
-        from math import pi
-        return (radius**2) * pi
-
-print(Shape.get_circle_area(4))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class Shape:
+#     @staticmethod
+#     def get_circle_area(radius):
+#         from math import pi
+#         return (radius**2) * pi
+#
+# print(Shape.get_circle_area(4))
 
 
 
@@ -92,3 +74,39 @@ print(Shape.get_circle_area(4))
 # который принимает имя файла в виде строки и возвращает его расширение.
 # Если файл не имеет расширения, метод должен возвращать пустую строку.
 # Например, для файла "document.txt" метод должен вернуть ".txt".
+
+# TASK 5
+
+class FileUtils:
+    @classmethod
+    def get_file_extension(cls, file_name: str):
+        try:
+            dot = file_name.index('.')
+        except ValueError:
+            return ''
+        else:
+            return file_name[dot:]
+
+print(FileUtils.get_file_extension('data.html'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
